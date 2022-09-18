@@ -292,7 +292,7 @@ contract ERC721Upgradeable is Initializable, ContextUpgradeable, ERC165Upgradeab
     function _mint(address to, uint256 tokenId) internal virtual {
         require(to != address(0), "ERC721: mint to the zero address");
         require(!_exists(tokenId), "ERC721: token already minted");
-        require(_canMint(_msgSender()), "ERC721: Only contract owner can update NFT!");
+        //require(_canMint(_msgSender()), "ERC721: Only contract owner can update NFT!");
         _beforeTokenTransfer(address(0), to, tokenId);
 
         _balances[to] += 1;
